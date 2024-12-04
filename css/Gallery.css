@@ -1,0 +1,111 @@
+:root {
+    --text-color: black;
+    --background-color: white;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    justify-content: center;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    background-color: #dcdcdc;
+    scroll-behavior: smooth;
+}
+
+.user {
+    padding: 15px 25px; 
+    border-radius: 5px; 
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+.user:hover {
+    background-color: #b4eb34; 
+    transform: scale(1.1); 
+    border-radius: 25px;
+    text-decoration: underline;
+}
+
+nav {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 10px;
+    animation: slideIn 1s ease; 
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 15px 25px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+nav a:hover {
+    background-color: #b4eb34;
+    border-radius: 100px;
+    text-decoration: underline;
+    color: white; /* Change text color on hover */
+}
+
+.container {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 30px; 
+	margin-top: 10vh;
+}
+
+.container img {
+    width: 80vh; 
+    height: 60vh; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s, opacity 0.3s; 
+    opacity: 0; /* Start with opacity 0 for fade-in effect */
+    animation: fadeIn 0.5s forwards; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Start slightly lower */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+.container img:hover {
+    transform: scale(1.05); 
+    opacity: 0.8; 
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+}

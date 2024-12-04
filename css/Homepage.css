@@ -1,0 +1,174 @@
+:root {
+    --text-color: black;
+    --background-color: white;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    justify-content: center;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    background-color: #dcdcdc;
+    scroll-behavior: smooth;
+}
+
+.user {
+    padding: 15px 25px; 
+    border-radius: 25px; /* Was 5 px, changed it to 25 and same with the others */
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+.user:hover {
+
+    background-color: #b4eb34; 
+    transform: scale(1.1); 
+    border-radius: 25px;
+    text-decoration: underline;
+}
+
+nav {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 10px;
+    animation: slideIn 1s ease; 
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 15px 25px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 25px;
+}
+
+nav a:hover {
+    background-color: #b4eb34;
+    border-radius: 100px;
+    text-decoration: underline;
+    
+}
+
+
+.content1 {
+    text-align: center;
+    margin: 100px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 2);
+	animation: fadeIn 3s ease-in-out; 
+    cursor: pointer;
+    user-select: none;
+    font-family: Verdana, sans-serif;
+    justify-content: center;
+    color: black;
+
+}
+
+.content1:hover {
+	transform: scale(2.0);
+	transition: background-color 0.3s ease, transform 0.3s ease; 
+
+}
+
+.footer {
+    text-align: center;
+    margin: 10px;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+	margin-left: 12vh;
+	margin-right: 12vh;
+	animation: fadeIn 3s ease-in-out; 
+	
+	
+}
+
+.footer:hover {
+	background-color: #b4eb34;
+	transform: scale(1.1);
+	transition: background-color 0.3s ease, transform 0.3s ease; 
+	
+}
+
+
+h2, h3 {
+    color: black;
+    text-align: center;
+}
+
+
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+@keyframes change {
+    0% {
+        background-image: url('https://images.summitmedia-digital.com/spotph/images/2019/09/24/silliman-cover-inside-1569324698.jpg');
+    }
+    25% {
+        background-image: url('https://images.pexels.com/photos/5287510/pexels-photo-5287510.jpeg');
+    }
+    50% {
+        background-image: url('https://images.pexels.com/photos/942547/pexels-photo-942547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    }
+    75% {
+        background-image: url('https://images.squarespace-cdn.com/content/v1/508da03be4b0d28844ddf21c/1632330530899-QKJJFP6OZZBJYSIUP0VG/DumaGeTmE+icon+night+shot.jpg'); /* Corrected URL */
+    }
+    100% {
+        background-image: url('https://images.summitmedia-digital.com/spotph/images/2019/09/24/silliman-cover-inside-1569324698.jpg'); /* Loop back to the first image */
+    }
+}
+
+.background-image {
+    height: 100vh;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; 
+    animation: change 30s infinite; 
+}

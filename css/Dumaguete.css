@@ -1,0 +1,240 @@
+:root {
+    --text-color: black;
+    --background-color: white;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    justify-content: center;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    background-color: #dcdcdc;
+    scroll-behavior: smooth;
+}
+
+.user {
+    padding: 15px 25px; 
+    border-radius: 25px; 
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+.user:hover {
+    background-color: #b4eb34; 
+    transform: scale(1.1); 
+    border-radius: 25px;
+    text-decoration: underline;
+}
+
+nav {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 10px;
+    animation: slideIn 1s ease; 
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+nav a {
+    border-radius: 100px;
+    text-decoration: none;
+    color: black;
+    padding: 15px 25px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+nav a:hover {
+    background-color: #b4eb34;
+    border-radius: 100px;
+    text-decoration: underline;
+    color: white; /* Change text color on hover */
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    padding: 0px;
+	 margin-left: 5%;
+    margin-right: 5%;
+}
+
+.left {
+    flex: 1;
+}
+
+.main-image {
+    background-image: url('https://afamchi.com/wp-content/uploads/2023/11/Dumaguete-City-Bell-Tower-1920x1500.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    width: 110%; 
+    height: 85vh; 
+    border-radius: 20px; 
+	margin-top: 10vh;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 2);
+	animation: fadeIn 2s ease-in-out; 
+	
+}
+
+.main-image:hover {
+	transform: scale(1.2);
+	border-color: #b4eb34;
+	border-style: solid;
+	border-width: medium;	
+}
+	
+
+.right {
+    flex: 2;
+	margin-top: 10vh;
+	margin-left: 100px;
+	margin-right: 100px;
+	border-radius: 20px;
+	text-align: center;
+	animation: fadeIn 2s ease-in-out; 
+	text-align: center;
+    
+    background-color: #dcdcdc;
+    padding: 20px;
+	 box-shadow: 0 5px 10px rgba(0, 0, 0, 2);
+	
+}
+
+.right:hover {
+    border-radius: 50px;
+	transform: scale(1.3);
+	border-color: #b4eb34;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-style: solid;
+	border-width: medium;	
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(100px); /
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+.Highlights {
+    padding: 20px;
+    margin-top: 30vh; 
+    margin-left: 5%;
+    margin-right: 5%;
+    animation: fadeIn 5s ease-in-out; 
+}
+
+.Highlights h2 {
+    text-align: center;
+    animation: fadeIn 1s ease-in-out 0.5s forwards; 
+}
+
+.Highlights-images {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.Highlights-image {
+    width: 45%;
+    height: 80vh; 
+    margin: 80px 0;
+    border-radius: 8px; 
+    background-size: cover;
+    background-position: center;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 2);
+	
+}
+
+.image1:hover {
+	transform: scale(1.1);
+	border-color: #b4eb34;
+	border-style: solid;
+	border-width: medium;
+	font-size: 30px;
+	text-align: center;
+}
+
+.image2:hover {
+	transform: scale(1.1);
+	border-color: #b4eb34;
+	border-style: solid;
+	border-width: medium;
+	font-size: 30px;
+	text-align: center;
+}
+
+.image3:hover {
+	transform: scale(1.1);
+	border-color: #b4eb34;
+	border-style: solid;
+	border-width: medium;
+	font-size: 30px;
+	text-align: center;
+}
+
+.image4:hover {
+	transform: scale(1.1);
+	border-color: #b4eb34;
+	border-style: solid;
+	border-width: medium;
+	font-size: 30px;
+	text-align: center;
+}
+
+
+
+
+	
+
+.image1 {
+    background-image: url('https://i0.wp.com/afamchi.com/wp-content/uploads/2023/11/image-4.jpg?resize=1020%2C765&ssl=1'); 
+}
+.image2 {
+    background-image: url('https://dumaguete.com/wp-content/uploads/2018/11/Dumaguete-City.jpg');
+}
+
+.image3 {
+    background-image: url('https://midwaystayapartments.com/wp-content/uploads/2023/02/dumaguete-tourist-spots-5-768x575.jpg'); 
+}
+.image4 {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/National_Museum_Negros_Oriental.jpg/1200px-National_Museum_Negros_Oriental.jpg');
+}	
+
+h5 {
+	text-align: left;
+	margin-left: 5vh;
+	margin-top: 5vh;
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+}

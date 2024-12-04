@@ -1,0 +1,209 @@
+:root {
+    --text-color: black;
+    --background-color: white;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+body {
+    font-family: "Poppins";
+    font-family: Verdana, sans-serif;
+    justify-content: center;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    background-color: #dcdcdc;
+    scroll-behavior: smooth;
+}
+
+.user {
+    padding: 15px 25px; 
+    border-radius: 25px; /* Was 5 px, changed it to 25 and same with the others */
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+.user:hover {
+
+    background-color: #b4eb34; 
+    transform: scale(1.1); 
+    border-radius: 25px;
+    text-decoration: underline;
+}
+
+nav {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 10px;
+    animation: slideIn 1s ease; 
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 15px 25px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 25px;
+}
+
+nav a:hover {
+    background-color: #b4eb34;
+    border-radius: 100px;
+    text-decoration: underline;
+    
+}
+.content1
+{   
+    backdrop-filter: blur(50px);
+    margin: 30px;
+    width: 420px;
+    background: transparent;
+    color: #fff;
+    padding: 30px 40px;
+    border: 2px solid rgba(83,93,98,255);
+}
+
+.content1 h1
+{
+    font-size: 36px;
+    text-align: center;
+}
+.content1 h4
+{
+    padding-left: 10px;
+}
+.content1 .input-box
+{
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input
+{
+    width: 100%;
+    height: 50%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .3);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+
+}
+
+.input-box input::placeholder
+{
+    color: #fff;
+}
+
+.check-box .checkboxes
+{
+    padding-left: 20px;
+}
+
+.commentbox
+{
+    margin: 10px;
+}
+.commentbox textarea
+{
+
+    width: 100%;
+    height: 100%;
+    resize: none;
+    padding: 10px 10px 10px 10px;
+    border-radius: 20px;
+}
+
+.submitbutton input
+{
+    height: 100%;
+    width: 100%;
+}
+
+.footer {
+    text-align: center;
+    margin: 10px;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+	margin-left: 12vh;
+	margin-right: 12vh;
+	animation: fadeIn 3s ease-in-out; 
+	
+	
+}
+
+.footer:hover {
+	background-color: #b4eb34;
+	transform: scale(1.1);
+	transition: background-color 0.3s ease, transform 0.3s ease; 
+	
+}
+
+
+h2, h3 {
+    color: black;
+    text-align: center;
+}
+
+
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+
+
+.background-image {
+    height: 100vh;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; 
+    background-image: url("../images/greenWallpaper3.jpg");
+}

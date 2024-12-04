@@ -1,24 +1,20 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins");
 
-html 
-{
+html {
     scroll-behavior: smooth;
 }
 
-* 
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* u can do some changes to the layout*/
-body 
-{
+body {
     font-family: "Poppins";
     background-color: #f0f0f0; /* u can change the color */
     background-image: url('../images/greenWallpaper3.jpg');
-    background-size:cover; 
+    background-size: cover; 
     background-position: center;
     background-repeat: no-repeat; 
     display: flex;
@@ -26,11 +22,10 @@ body
     align-items: center;
     height: 100vh;
     padding: 20px; 
+
 }
 
-
-.login-container 
-{
+.login-container {
     background: transparent;
     backdrop-filter: blur(20px);
     border-radius: 8px;
@@ -40,30 +35,27 @@ body
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
     position: relative; 
     left: 300px; 
+    height: 60%;
 }
 
-h2 
-{
+h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* Reduced spacing */
     color: #fff;
 }
 
-.input-group 
-{
-    margin-bottom: 60px;
+.input-group {
+    margin-bottom: 20px; /* Reduced spacing */
 }
 
-.input-group label 
-{
+.input-group label {
     display: block;
     font-weight: bold;
     margin-bottom: 8px;
     color: #fff;
 }
 
-.input-group input 
-{   
+.input-group input {   
     width: 100%;
     padding: 12px;
     border: 3px solid #ddd;
@@ -73,14 +65,12 @@ h2
     transition: border-color 0.3s; 
 }
 
-.input-group input:focus 
-{
+.input-group input:focus {
     border-color: #87A96B; 
     outline: none;
 }
 
-.input-group button 
-{
+.input-group button {
     width: 100%;
     padding: 12px;
     background: #87A96B;
@@ -92,8 +82,6 @@ h2
     transition: background-color 0.3s; 
 }
 
-.input-group button:hover 
-{
+.input-group button:hover {
     background-color: #4B6F44;
 }
-
